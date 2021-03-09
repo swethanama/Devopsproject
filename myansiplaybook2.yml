@@ -20,4 +20,4 @@
   - name: build dockerfile
     command: chdir=/tmp/gitrepo docker build -t projectimage:ansible .
   - name: run the dockerfile
-    command: docker run -itd -p 8083:80 projectimage:ansible
+    command: docker run -itd -p 8084:80 projectimage:ansible
