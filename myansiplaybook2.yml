@@ -25,7 +25,7 @@
       image: projectimage
       state: present
       recreate: no
-      exposed_ports:
-      - 6379
+      exposed_ports: 6379
+      
       
 
