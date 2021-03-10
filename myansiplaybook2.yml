@@ -22,7 +22,7 @@
   - name: Run the dockerfile
     docker_container:
       name: mydockerimage
-      image: projectimage
+      image: projectimage:ansible
       state: present
       recreate: no
       exposed_ports: 6379
