@@ -19,6 +19,13 @@
     git: repo=https://github.com/swethanama/Devopsproject.git dest=/tmp/gitrepo
   - name: build dockerfile
     command: chdir=/tmp/gitrepo docker build -t projectimage:ansible .
-  - name: run the dockerfile
-    command: docker run -itd -p 8086:80 projectimage:ansible
+  - name: Run the dockerfile
+    docker_container:
+      name: mydockerimage
+      image: projectimage
+      state: present
+      recreate: no
+      exposed_ports:
+      - 6379
+      
 
