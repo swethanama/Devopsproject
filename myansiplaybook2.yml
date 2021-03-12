@@ -18,7 +18,7 @@
   - name: get the dockerfile from githib
     git: repo=https://github.com/swethanama/Devopsproject.git dest=/tmp/gitrepo
   - name: build dockerfile
-    command: chdir=/tmp/gitrepo docker build -itd -p 8082:80 projectimage:ansible .
+    command: chdir=/tmp/gitrepo docker build -d -p 8082:80 projectimage:ansible .
   - name: Run the dockerfile
     docker_container:
       name: mydockerimage
